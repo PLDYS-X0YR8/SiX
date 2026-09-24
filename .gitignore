@@ -1,0 +1,28 @@
+# Visual Studio 编译输出
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Visual Studio 临时文件
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 编译产物
+*.dll
+*.lib
+*.exe
+*.exp
+*.pdb
+*.ilk
+*.idb
+*.obj
+*.tlog
+*.log
