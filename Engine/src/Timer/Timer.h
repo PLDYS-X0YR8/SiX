@@ -1,14 +1,14 @@
 #pragma once
-#include <chrono>
-#include <vector>
-#include <thread>
-#include "../sixcore.h"
-namespace Engine{
+#include "../spch.h"
+namespace Six{
+	struct STimeParts {
+
+	};
 	class SIXAPI STimer
 	{
 	public:
 		void Update();
-		void Init(bool& res);
+		bool Init();
 		void Reset();
 		void ResetCounter() {
 			m_counter = 0;

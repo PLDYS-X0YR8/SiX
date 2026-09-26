@@ -1,14 +1,16 @@
-#include <iostream>
 #include "SixEngine.h"
+#include "Game.h"
 
 int main() {
-    Engine::STimer timer;
-    bool ok;
-    timer.Init(ok);
-    std::cout << "SixEngine Sandbox running, timer init=" << ok << "\n";
-    while (true) {
+    Six::STimer timer;
+    Game g;
+    bool ok = timer.Init();
+    ok &= g.OnInit();
+    std::cout << "Init Ok=" << ok << "\n";
+    while (!g.ShouldClose()) {
         timer.Update();
-        std::cout << "deltatime=" << timer.deltatime << "\n";
+        g.OnUpdate(timer.deltatime);
     }
+    g.OnShutdown();
     return 0;
 }

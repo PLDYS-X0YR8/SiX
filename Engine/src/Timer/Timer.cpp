@@ -1,13 +1,14 @@
+#include "spch.h"
 #include "Timer.h"
 
-namespace Engine {
-	void STimer::Init(bool& res) {
+namespace Six {
+	bool STimer::Init() {
 		m_start = std::chrono::steady_clock::now();
 		deltatime = 0.0f;
 		nowtime = 0.0f;
 		lasttime = 0.0f;
 		m_counter = 0;
-		res = true;
+		return true;
 	}
 
 	void STimer::Update() {
